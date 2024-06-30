@@ -7,29 +7,102 @@
 
     <style>
         body {
-            background-color: gray;
+            background-image: url('https://i.gifer.com/7SYH.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
 
-        h1 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
             text-align: center;
         }
 
-        h3 {
+        h1, h2, h3, p {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .neonTitle {
+            font-size: 80px;
+            color: #fff;
+            text-shadow:
+                0 0 7px #e2e2e2,
+                0 0 10px #ffffff,
+                0 0 21px #c0c0c0,
+                0 0 42px rgb(160, 160, 160),
+                0 0 82px rgb(143, 140, 140),
+                0 0 92px rgb(102, 102, 102),
+                0 0 102px rgb(66, 66, 66),
+                0 0 151px rgb(48, 48, 48);
+            margin-bottom: 20px;
+        }
+
+        .neonSubTitle {
+            font-size: 35px;
+            color: #e7e7e7;
+            text-shadow:
+                0 0 7px #e2e2e2,
+                0 0 10px #ffffff,
+                0 0 21px #c0c0c0,
+                0 0 42px rgb(160, 160, 160),
+                0 0 82px rgb(143, 140, 140),
+                0 0 92px rgb(102, 102, 102),
+                0 0 102px rgb(66, 66, 66),
+                0 0 151px rgb(48, 48, 48);
+            margin-bottom: 20px;
+        }
+
+        .upload-section {
+            margin-top: 50px;
             text-align: center;
         }
 
-        p {
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: cent
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px #707070;
         }
     </style>
 </head>
 <body>
-    <h1>Fake News</h1>
-    <h3>Abdullah, Umar, Ashad, Wasey, Ajwad </h3>
+    <div class="container">
+        <h1 class="neonTitle">Fake News</h1>
+        <h2 class="neonSubTitle">صَحِيْح vs ضعيف</h2>
+        <h3>Abdullah, Umar, Ashad, Wasey, Ajwad</h3>
+        <p>We created a model that can accurately detect whether news is fake or real</p>
+    </div>
 
-    <p>We created a model that can accurately detect</p>
+    <div class="upload-section">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".txt">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
 </body>
 </html>
